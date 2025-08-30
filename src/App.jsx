@@ -117,9 +117,9 @@ const portfolioData = {
         }
     ],
     certifications: [
-        { name: 'AWS Certified Solutions Architect - Associate', issuer: 'Amazon Web Services', date: '2023' },
-        { name: 'MongoDB Certified Developer, Associate Level', issuer: 'MongoDB Inc.', date: '2022' },
-        { name: 'Full-Stack Web Development', issuer: 'Coursera', date: '2021' },
+        { name: 'AWS Certified Solutions Architect - Associate', issuer: 'Amazon Web Services', date: '2023', image: 'certification_pictures/images.png' },
+        { name: 'MongoDB Certified Developer, Associate Level', issuer: 'MongoDB Inc.', date: '2022', image: 'certification_pictures/images.png' },
+        { name: 'Full-Stack Web Development', issuer: 'Coursera', date: '2021', image: 'certification_pictures/images.png' },
     ]
 };
 
@@ -301,10 +301,22 @@ const Certifications = () => {
             <div className="max-w-4xl mx-auto">
                 <ul className="space-y-6">
                     {portfolioData.certifications.map((cert, index) => (
-                        <li key={index} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                            <h3 className="text-lg font-bold text-slate-900 dark:text-white">{cert.name}</h3>
-                            <p className="text-slate-600 dark:text-slate-300">{cert.issuer}</p>
-                            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{cert.date}</p>
+                        <li key={index} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-between">
+                            {/* Content on the left */}
+                            <div className="flex-1 pr-4">
+                                <h3 className="text-lg font-bold text-slate-900 dark:text-white">{cert.name}</h3>
+                                <p className="text-slate-600 dark:text-slate-300">{cert.issuer}</p>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{cert.date}</p>
+                            </div>
+
+                            {/* Image on the right */}
+                            <div className="flex-shrink-0">
+                                <img 
+                                    src={cert.image} 
+                                    alt={`Certificate: ${cert.name}`} 
+                                    className="w-40 h-auto rounded-lg" // Set a fixed width and fluid height for better aspect ratio
+                                />
+                            </div>
                         </li>
                     ))}
                 </ul>
