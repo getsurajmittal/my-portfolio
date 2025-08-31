@@ -57,7 +57,7 @@ const ExternalLinkIcon = () => (
 // --- PORTFOLIO DATA --- //
 const portfolioData = {
     name: "Suraj Mittal",
-    title: "Software Developer",
+    title: "Software Developer | DevOps Enthusiast",
     resumeUrl: "/suraj-mittal-resume.pdf", // Place your resume in the 'public' folder
     socials: {
         github: "https://github.com/getsurajmittal",
