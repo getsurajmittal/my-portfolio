@@ -117,9 +117,7 @@ const portfolioData = {
         }
     ],
     certifications: [
-        { name: 'Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)', issuer: 'Oracle', date: '2025', image: 'certification_pictures/OCI25AICFA.png' },
-        { name: 'MongoDB Certified Developer, Associate Level', issuer: 'MongoDB Inc.', date: '2022', image: 'certification_pictures/images.png' },
-        { name: 'Full-Stack Web Development', issuer: 'Coursera', date: '2021', image: 'certification_pictures/images.png' },
+        { name: 'Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)', issuer: 'Oracle', date: '2025', image: 'certification_pictures/oracle-logo-vector.png', link : 'certification_pictures/OCIAIFoundations.pdf' },
     ]
 };
 
@@ -307,6 +305,18 @@ const Certifications = () => {
                                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">{cert.name}</h3>
                                 <p className="text-slate-600 dark:text-slate-300">{cert.issuer}</p>
                                 <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{cert.date}</p>
+
+                                {/* View button */}
+                                {cert.link && (
+                                <a
+                                    href={cert.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block mt-3 px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-colors"
+                                >
+                                    View Certificate
+                                </a>
+                                )}
                             </div>
 
                             {/* Image on the right */}
