@@ -117,7 +117,7 @@ const portfolioData = {
         }
     ],
     certifications: [
-        { name: 'AWS Certified Solutions Architect - Associate', issuer: 'Amazon Web Services', date: '2023', image: 'certification_pictures/images.png' },
+        { name: 'Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)', issuer: 'Oracle', date: '2025', image: 'certification_pictures/OCI25AICFA.png' },
         { name: 'MongoDB Certified Developer, Associate Level', issuer: 'MongoDB Inc.', date: '2022', image: 'certification_pictures/images.png' },
         { name: 'Full-Stack Web Development', issuer: 'Coursera', date: '2021', image: 'certification_pictures/images.png' },
     ]
